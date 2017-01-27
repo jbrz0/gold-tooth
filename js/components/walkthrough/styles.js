@@ -1,0 +1,121 @@
+
+const React = require('react-native');
+
+const { StyleSheet } = React;
+
+module.exports = StyleSheet.create({
+  container: {
+    // backgroundColor: '#FBFAFA',
+  },
+  row: {
+    flex: 1,
+    alignItems: 'center',
+    // backgroundColor: 'red',
+    height: 32,
+    marginBottom: 5,
+    paddingTop: 8,
+  },
+  text: {
+    color: '#F3F3F3',
+    fontSize: 18,
+    marginBottom: 15,
+    alignItems: 'center',
+  },
+  mt: {
+    marginBottom: 110,
+  },
+  backgroundImage: {
+      flex: 1,
+      width: null,
+      height: null,
+      resizeMode: 'cover',
+  },
+  iconMenuBtnLeftActive: {
+    backgroundColor: '#F5D547',
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    borderWidth: 2,
+    borderColor: '#F5D547',
+    borderStyle: 'solid',
+    position: 'absolute',
+    right: 20,
+  },
+  iconMenuBtnLeft: {
+    backgroundColor: 'transparent',
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    borderWidth: 2,
+    borderColor: '#F3F3F3',
+    borderStyle: 'solid',
+    position: 'absolute',
+    right: 20,
+  },
+  iconMenuBtnRight: {
+    backgroundColor: 'transparent',
+    width: 80,
+    height: 80,
+    borderRadius: 40,
+    borderWidth: 2,
+    borderColor: '#F3F3F3',
+    borderStyle: 'solid',
+    position: 'absolute',
+    left: 20,
+  },
+  btnBottom: {
+    backgroundColor: '#A01A7D',
+    position: 'absolute',
+    bottom: 0,
+    borderRadius: 0,
+    left: 0,
+    right: 0,
+    // paddingTop: 20,
+    // paddingBottom: 20,
+    height: 60,
+  },
+  btnBottomTxt: {
+    color: '#F3F3F3',
+    textAlign: 'center',
+  },
+  carouselWrap: {
+    flex: 1,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    paddingBottom: 60,
+    // paddingTop: 30,
+  },
+  walkthroughBtn: {
+    backgroundColor: '#F5D547',
+    borderRadius: 0,
+    height: 60,
+    marginTop: 30,
+    marginLeft: 40,
+    marginRight: 40,
+    borderRadius: 30,
+  },
+  carouselSlide: {
+    backgroundColor: 'transparent',
+    textAlign: 'center',
+    marginTop: -20,
+  },
+  carouselSlideInner: {
+    backgroundColor: 'rgba(243,243,243,0.1)',
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+  },
+  iconCarousel: {
+    color: '#F3F3F3',
+    fontSize: 50,
+    alignSelf: 'center',
+    marginTop: 25,
+  },
+  carouselText: {
+    marginTop: 40,
+    textAlign: 'center',
+    width: 260,
+    marginLeft: -78,
+    color: '#F3F3F3',
+  },
+});
