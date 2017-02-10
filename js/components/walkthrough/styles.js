@@ -114,8 +114,8 @@ module.exports = StyleSheet.create({
   carouselText: {
     marginTop: 40,
     textAlign: 'center',
-    width: 260,
-    marginLeft: -78,
+    width: 200,
+    marginLeft: -46,
     color: '#F3F3F3',
   },
 });

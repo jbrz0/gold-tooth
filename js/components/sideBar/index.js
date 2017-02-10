@@ -68,7 +68,7 @@ class SideBar extends Component {
             <Text style={styles.menuListTxt}>Walkthrough</Text>
           </Row></ListItem>
           <ListItem button onPress={() => this.navigateTo('dashboard')} style={styles.listItem}><Row>
-            <Icon name="ios-book-outline" style={styles.menuListIcon} />
+            <Icon name="ios-analytics-outline" style={styles.menuListIcon} />
             <Text style={styles.menuListTxt}>Dashboard</Text>
           </Row></ListItem>
 
