@@ -123,7 +123,6 @@ export default {
   toolbarTextColor: (Platform.OS === 'ios') ? '#F3F3F3' : '#fff',
   get statusBarColor() {
     return color(this.toolbarDefaultBg).darken(0.2).hexString();
-    // return color(this.toolbarInverseBg).darken(0.2).hexString();
   },
 
 
@@ -166,7 +165,6 @@ export default {
 
   // List
   listBorderColor: '#ACAAAB',
-  // listBorderColor: '#ddd',
   listDividerBg: '#ddd',
   listItemHeight: 45,
   listItemPadding: 9,

@@ -6,7 +6,6 @@ import NativeBaseComponent from 'native-base/Components/Base/NativeBaseComponent
 
 export default class ProgressBarNB extends NativeBaseComponent {
 
-
   render() {
     const getColor = () => {
       if (this.props.color) {

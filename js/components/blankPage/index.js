@@ -69,5 +69,4 @@ const mapStateToProps = state => ({
   list: state.list.list,
 });
 
-
 export default connect(mapStateToProps, bindAction)(BlankPage);

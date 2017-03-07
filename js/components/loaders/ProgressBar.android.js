@@ -20,7 +20,6 @@ export default class SpinnerNB extends NativeBaseComponent {
     return computeProps(this.props, defaultProps);
   }
 
-
   render() {
     const getColor = () => {
       if (this.props.color) {
@@ -40,7 +39,7 @@ export default class SpinnerNB extends NativeBaseComponent {
         progress={this.props.progress ? this.props.progress / 100 : 0.5}
         color={getColor()}
       />
-        );
+    );
   }
 
 }

@@ -1,18 +1,17 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Image, View, TouchableOpacity, AppRegistry, Dimensions, StyleSheet } from 'react-native';
-// import { Content, Text, List, ListItem } from 'native-base';
+import { Image, View, TouchableOpacity } from 'react-native';
 import { Container, Header, Title, Content, Text, Button, Icon } from 'native-base';
+import { Grid, Row } from 'react-native-easy-grid';
+import Calendar from 'react-native-calendar';
 
 import { setIndex } from '../../actions/list';
 import navigateTo from '../../actions/sideBarNav';
 import myTheme from '../../themes/base-theme';
 import styles from './styles';
 import { openDrawer } from '../../actions/drawer';
-import { Grid, Row, Col } from 'react-native-easy-grid';
-
-import Calendar from 'react-native-calendar';
+import bgGradientImg from '../../../images/bgGradient.jpg';
 
 const customStyle = {
   calendarContainer: {
@@ -25,7 +24,6 @@ const customStyle = {
     fontSize: 14,
   },
   currentDayCircle: {
-    // backgroundColor: '#F3F3F3',
     backgroundColor: '#F5D547',
     borderRadius: 0,
   },
@@ -36,10 +34,6 @@ const customStyle = {
     color: '#F3F3F3',
     borderTopWidth: 0,
   },
-  // dayHeading: {
-  //   color: 'red',
-  //   backgroundColor: 'red',
-  // },
   controlButton: {
     backgroundColor: 'transparent',
   },
@@ -72,21 +66,9 @@ const customStyle = {
     borderTopWidth: 0,
     borderBottomWidth: 0,
   },
-}
+};
 
 class CalendarPage extends Component {
-
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      date: new Date(),
-    }
-  }
-
-  onDateChange(date) {
-    this.setState({ date: date });
-  }
 
   static propTypes = {
     navigator: React.PropTypes.shape({}),
@@ -94,8 +76,16 @@ class CalendarPage extends Component {
     navigateTo: React.PropTypes.func,
   }
 
-  componentWillMount() {
-    const navigator = this.props.navigator;
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      date: new Date(),
+    };
+  }
+
+  onDateChange(date) {
+    this.setState({ date });
   }
 
   navigateTo(route) {
@@ -106,93 +96,83 @@ class CalendarPage extends Component {
     return (
 
 
-    <Image source={require('../../../images/bgGradient.jpg')}
-        style={styles.backgroundImage}>
-      <Container theme={myTheme} style={styles.container}>
-        <Header>
-          {/* <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
-            <Icon name="ios-power" />
-          </Button> */}
+      <Image
+        source={bgGradientImg}
+        style={styles.backgroundImage}
+      >
+        <Container theme={myTheme} style={styles.container}>
+          <Header>
+            {/* <Button transparent onPress={() => this.props.reset(this.props.navigation.key)}>
+              <Icon name="ios-power" />
+            </Button> */}
 
-          <Title>Calendar</Title>
+            <Title>Calendar</Title>
 
-          <Button transparent onPress={this.props.openDrawer}>
-            <Icon name="ios-menu" />
-          </Button>
-        </Header>
+            <Button transparent onPress={this.props.openDrawer}>
+              <Icon name="ios-menu" />
+            </Button>
+          </Header>
 
-        <View style={styles.iconMenuWrap}>
-          <Calendar
-            customStyle={customStyle}
-            showControls/>
-        </View>
-        <View style={styles.iconMenuWrapBottom}>
+          <View style={styles.iconMenuWrap}>
+            <Calendar
+              customStyle={customStyle}
+              showControls
+            />
+          </View>
+          <View style={styles.iconMenuWrapBottom}>
+            <Content>
+              <Grid style={styles.mt}>
+                <Row><TouchableOpacity style={styles.row}>
+                  <Text style={styles.text}>Meeting with friend</Text>
 
-
-          <Content>
-
-
-
-          <Grid style={styles.mt}>
-            <Row><TouchableOpacity style={styles.row}>
-              <Text style={styles.text}>Meeting with friend</Text>
-
-                <View style={{flexDirection: 'row'}}>
-                  <Icon name="ios-clock-outline" style={styles.iconCalender} />
-                  <Text style={styles.textBelow}>
-                     8–10am
-                  </Text>
-                </View>
-            </TouchableOpacity></Row>
-          </Grid>
-          <Grid style={styles.mt}>
-            <Row><TouchableOpacity style={styles.row}>
-              <Text style={styles.text}>Respond to email</Text>
-                <View style={{flexDirection: 'row'}}>
-                  <Icon name="ios-mail-outline" style={styles.iconCalender} />
-                  <Text style={styles.textBelow}>
+                  <View style={{ flexDirection: 'row' }}>
+                    <Icon name="ios-clock-outline" style={styles.iconCalender} />
+                    <Text style={styles.textBelow}>
+                       8–10am
+                    </Text>
+                  </View>
+                </TouchableOpacity></Row>
+              </Grid>
+              <Grid style={styles.mt}>
+                <Row><TouchableOpacity style={styles.row}>
+                  <Text style={styles.text}>Respond to email</Text>
+                  <View style={{ flexDirection: 'row' }}>
+                    <Icon name="ios-mail-outline" style={styles.iconCalender} />
+                    <Text style={styles.textBelow}>
                      8–30am
-                  </Text>
-                </View>
-            </TouchableOpacity></Row>
-          </Grid>
-          <Grid style={styles.mt}>
-            <Row><TouchableOpacity style={styles.row}>
-              <Text style={styles.text}>Important event</Text>
-                <View style={{flexDirection: 'row'}}>
-                  <Icon name="ios-flag-outline" style={styles.iconCalender} />
-                  <Text style={styles.textBelow}>
+                    </Text>
+                  </View>
+                </TouchableOpacity></Row>
+              </Grid>
+              <Grid style={styles.mt}>
+                <Row><TouchableOpacity style={styles.row}>
+                  <Text style={styles.text}>Important event</Text>
+                  <View style={{ flexDirection: 'row' }}>
+                    <Icon name="ios-flag-outline" style={styles.iconCalender} />
+                    <Text style={styles.textBelow}>
                      12:30pm
-                  </Text>
-                </View>
-            </TouchableOpacity></Row>
-          </Grid>
-          <Grid style={styles.mt}>
-            <Row><TouchableOpacity style={styles.row}>
-              <Text style={styles.text}>Important meeting</Text>
-
-                <View style={{flexDirection: 'row'}}>
-                  <Icon name="ios-funnel-outline" style={styles.iconCalender} />
-                  <Text style={styles.textBelow}>
-                     1:15pm
-                  </Text>
-                </View>
-            </TouchableOpacity></Row>
-          </Grid>
-
-
-          </Content>
-
-
-        </View>
-      </Container>
-
-    </Image>
+                    </Text>
+                  </View>
+                </TouchableOpacity></Row>
+              </Grid>
+              <Grid style={styles.mt}>
+                <Row><TouchableOpacity style={styles.row}>
+                  <Text style={styles.text}>Important meeting</Text>
+                  <View style={{ flexDirection: 'row' }}>
+                    <Icon name="ios-funnel-outline" style={styles.iconCalender} />
+                    <Text style={styles.textBelow}>
+                      1:15pm
+                    </Text>
+                  </View>
+                </TouchableOpacity></Row>
+              </Grid>
+            </Content>
+          </View>
+        </Container>
+      </Image>
     );
   }
 }
-
-
 
 function bindAction(dispatch) {
   return {

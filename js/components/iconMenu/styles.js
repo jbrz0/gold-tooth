@@ -4,13 +4,10 @@ const React = require('react-native');
 const { StyleSheet } = React;
 
 module.exports = StyleSheet.create({
-  container: {
-    // backgroundColor: '#FBFAFA',
-  },
+  container: {},
   row: {
     flex: 1,
     alignItems: 'center',
-    // backgroundColor: 'red',
     height: 32,
     marginBottom: 5,
     paddingTop: 8,
@@ -25,10 +22,10 @@ module.exports = StyleSheet.create({
     marginBottom: 110,
   },
   backgroundImage: {
-      flex: 1,
-      width: null,
-      height: null,
-      resizeMode: 'cover',
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
   },
   iconMenuBtnLeftActive: {
     backgroundColor: '#F5D547',
@@ -70,8 +67,6 @@ module.exports = StyleSheet.create({
     borderRadius: 0,
     left: 0,
     right: 0,
-    // paddingTop: 20,
-    // paddingBottom: 20,
     height: 60,
   },
   btnBottomTxt: {

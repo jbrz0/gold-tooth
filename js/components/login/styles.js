@@ -35,7 +35,6 @@ module.exports = StyleSheet.create({
   },
   btn: {
     marginTop: 20,
-    alignSelf: 'center',
     backgroundColor: '#F3F3F3',
     shadowRadius: 0,
     shadowOpacity: 0,
@@ -47,19 +46,16 @@ module.exports = StyleSheet.create({
   },
   logoImg: {
     flex: 1,
-    // width: null,
-    // height: null,
     width: 170,
     height: 60,
-    // resizeMode: 'contain',
     margin: 0,
     alignSelf: 'center',
   },
   backgroundImage: {
-      flex: 1,
-      width: null,
-      height: null,
-      resizeMode: 'cover',
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
   },
   homeTopSpace: {
     flex: 2,

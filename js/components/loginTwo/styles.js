@@ -45,19 +45,16 @@ module.exports = StyleSheet.create({
   },
   logoImg: {
     flex: 1,
-    // width: null,
-    // height: null,
     width: 170,
     height: 60,
-    // resizeMode: 'contain',
     margin: 0,
     alignSelf: 'center',
   },
   backgroundImage: {
-      flex: 1,
-      width: null,
-      height: null,
-      resizeMode: 'cover',
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
   },
   homeTopSpace: {
     flex: 2,

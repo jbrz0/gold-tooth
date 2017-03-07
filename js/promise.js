@@ -1,6 +1,6 @@
 
 function warn(error) {
-  throw error; // To let the caller handle the rejection
+  throw error;
 }
 
 module.exports = () => next => action => (

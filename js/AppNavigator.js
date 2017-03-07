@@ -138,7 +138,6 @@ class AppNavigator extends Component {
       >
         <StatusBar
           backgroundColor={statusBarColor}
-          // barStyle="default"
           barStyle="light-content"
         />
         <NavigationCardStack

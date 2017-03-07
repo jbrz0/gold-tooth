@@ -3,18 +3,18 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Image } from 'react-native';
 import { Content, Text, List, ListItem, Icon } from 'native-base';
-import { Grid, Row, Col } from 'react-native-easy-grid';
+import { Row, Col } from 'react-native-easy-grid';
 
 import { setIndex } from '../../actions/list';
 import navigateTo from '../../actions/sideBarNav';
 import myTheme from '../../themes/base-theme';
+import avatarPath from '../../../images/avatar.png';
 
 import styles from './style';
 
 class SideBar extends Component {
 
   static propTypes = {
-    // setIndex: React.PropTypes.func,
     navigateTo: React.PropTypes.func,
   }
 
@@ -26,17 +26,19 @@ class SideBar extends Component {
     return (
       <Content theme={myTheme} style={styles.sidebar} >
 
-        <Content style={{backgroundColor: 'rgba(22,25,37,0.04)', marginBottom: 20,}}>
-          <Content style={{paddingTop: 40, paddingBottom: 30}}>
+        <Content style={{ backgroundColor: 'rgba(22,25,37,0.04)', marginBottom: 20 }}>
+          <Content style={{ paddingTop: 40, paddingBottom: 30 }}>
             <Row>
-            <Col style={{width: 100,}}>
-              <Image source={require('../../../images/avatar.png')}
-              style={{width: 60, height: 60, borderRadius: 30, marginLeft: 20}}/>
-            </Col>
-            <Col>
-              <Row><Text style={{color: '#161925', fontSize: 18, position: 'absolute', bottom: 0}}>Person Name</Text></Row>
-              <Row><Text style={{color: '#161925', fontSize: 12,}}>email@address.com</Text></Row>
-            </Col>
+              <Col style={{ width: 100 }}>
+                <Image
+                  source={avatarPath}
+                  style={{ width: 60, height: 60, borderRadius: 30, marginLeft: 20 }}
+                />
+              </Col>
+              <Col>
+                <Row><Text style={{ color: '#161925', fontSize: 18, position: 'absolute', bottom: 0 }}>Person Name</Text></Row>
+                <Row><Text style={{ color: '#161925', fontSize: 12 }}>email@address.com</Text></Row>
+              </Col>
             </Row>
           </Content>
         </Content>
@@ -73,7 +75,6 @@ class SideBar extends Component {
           </Row></ListItem>
 
         </List>
-
       </Content>
     );
   }

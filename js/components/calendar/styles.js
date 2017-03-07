@@ -4,27 +4,19 @@ const React = require('react-native');
 const { StyleSheet } = React;
 
 module.exports = StyleSheet.create({
-  container: {
-    // backgroundColor: '#FBFAFA',
-  },
+  container: {},
   row: {
     flex: 1,
     alignItems: 'flex-start',
-    // backgroundColor: 'red',
     height: 32,
     marginBottom: 5,
     paddingTop: 6,
-    // marginLeft: 20,
-    // marginRight: 20,
-
-
   },
   text: {
     color: '#F3F3F3',
     fontSize: 14,
     marginBottom: 6,
     fontWeight: 'bold',
-    // textAlign: 'left',
     alignItems: 'flex-start',
   },
   mt: {
@@ -35,13 +27,12 @@ module.exports = StyleSheet.create({
     borderBottomWidth: 1,
     borderStyle: 'solid',
     borderColor: 'rgba(243,243,243,0.1)',
-
   },
   backgroundImage: {
-      flex: 1,
-      width: null,
-      height: null,
-      resizeMode: 'cover',
+    flex: 1,
+    width: null,
+    height: null,
+    resizeMode: 'cover',
   },
   iconMenuBtnLeftActive: {
     backgroundColor: '#F5D547',
@@ -83,8 +74,6 @@ module.exports = StyleSheet.create({
     borderRadius: 0,
     left: 0,
     right: 0,
-    // paddingTop: 20,
-    // paddingBottom: 20,
     height: 60,
   },
   btnBottomTxt: {
@@ -108,12 +97,11 @@ module.exports = StyleSheet.create({
     borderTopWidth: 0,
   },
   textBelow: {
-    // color: '#F3F3F3',
     color: 'rgba(243,243,243, 0.4)',
   },
   iconCalender: {
     color: '#F3F3F3',
     fontSize: 16,
     marginRight: 10,
-  }
+  },
 });
