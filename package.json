@@ -14,7 +14,7 @@
     "moment": "^2.27.0",
     "native-base": "2.13.13",
     "react": "16.13.1",
-    "react-native": "0.63.2",
+    "react-native": "0.64.1",
     "react-native-calendar": "^0.13.1",
     "react-native-carousel-control": "^2.0.1",
     "react-native-code-push": "6.3.0",
